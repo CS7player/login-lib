@@ -1,0 +1,28 @@
+{
+  "name": "login-lib",
+  "version": "1.0.0",
+  "description": "library for login node",
+  "keywords": [
+    "login-lib"
+  ],
+  "homepage": "https://github.com/CS7player/login-lib#readme",
+  "bugs": {
+    "url": "https://github.com/CS7player/login-lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CS7player/login-lib.git"
+  },
+  "license": "ISC",
+  "author": "s.h.chandrasekhar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "login-lib"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
