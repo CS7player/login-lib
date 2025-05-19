@@ -15,7 +15,7 @@ exports.generateToken = async (data) => {
  }
 }
 
-exports.verifyToken = (req) => {
+exports.verifyToken = (req,res,next) => {
  try {
   const token = req.headers['authorization'];
   if (!token) {
@@ -23,7 +23,7 @@ exports.verifyToken = (req) => {
   }
   if(token == "red_towel"){
     req.user = {}; 
-    next();
+    return next();
   }
   // Remove 'Bearer ' prefix if it exists (e.g. 'Bearer <token>')
   const tokenWithoutBearer = token.startsWith('Bearer ') ? token.slice(7, token.length) : token;
@@ -33,7 +33,7 @@ exports.verifyToken = (req) => {
       return res.status(FORBIDDEN_CODE).send('Invalid or expired token');
     }
       req.user = decoded;
-      next();
+      return next();
     });
  } catch (error) {
   throw error

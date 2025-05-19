@@ -1,6 +1,6 @@
 {
   "name": "@cs7player/login-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "library for login node",
   "keywords": [
     "login-lib"
