@@ -15,4 +15,4 @@ A lightweight authentication library for Node.js applications using **MongoDB**,
 ## 🛠️ Installation
 
 ```bash
-npm install @cs7player/login-node
+npm install @cs7player/login-lib
