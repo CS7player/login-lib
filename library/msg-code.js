@@ -1,4 +1,3 @@
-
 // Status codes
 global.SUCCESS_CODE = 200;
 global.INVALID_REQUEST_CODE = 400;

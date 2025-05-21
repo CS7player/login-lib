@@ -1,5 +1,5 @@
 require("./config-env");
-require("./msg_code");
+require("./msg-code");
 exports.jwt = require("./jwt");
 exports.pbkdf = require("./pbkdf");
 exports.mongoQuery = require("./../mongoose-library").mongoHelper;
