@@ -12,6 +12,7 @@ global.MONGO_DB_HOST = process.env.MONGO_DB_HOST || "";
 global.MONGO_DB_NAME = process.env.MONGO_DB_NAME || "";
 
 //otp
+global.IS_OTP_SERVICE = process.env.IS_OTP_SERVICE || 0;
 global.OAUTH2_CLIENT_ID = process.env.OAUTH2_CLIENT_ID || "";
 global.OAUTH2_CLIENT_SECRET = process.env.OAUTH2_CLIENT_SECRET || "";
 global.OAUTH2_REDIRECT_URI = process.env.OAUTH2_REDIRECT_URI || "";
