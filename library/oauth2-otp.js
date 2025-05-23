@@ -42,11 +42,16 @@ exports.sendOTPEmail = async (data) => {
     const mailOptions = {
       from: `OTP Service <${OAUTH2_SENDER_EMAIL}>`,
       to: user_mail,
-      subject: "Your OTP Code",
+      subject: "Your Sign-Up OTP Code",
       text: `To Username: ${username},\nYour OTP code is: ${otp}`,
       html: `<p>To Username: <strong>${username}</strong></p>
             <p>Your <strong>OTP</strong> code is: <strong>${otp}</strong></p>`,
     };
+    if(username == ""){
+      mailOptions["subject"] = "Your Forget-Password OTP Code";
+      mailOptions["text"] = `Your OTP code is: ${otp} for changing password`;
+      mailOptions["html"] = `<p>Your <strong>OTP</strong> code is: <strong>${otp}</strong> for changing password</p>`;
+    }
     const result = await transport.sendMail(mailOptions);
     return { result, otp };
   } catch (error) {
