@@ -5,7 +5,11 @@ let mongoConn;
 
 async function connectDB() {
  if (mongoConn) return mongoConn;
- mongoConn = mongoose.createConnection(connUrl);
+ mongoConn = mongoose.createConnection(connUrl,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  connectTimeoutMS: 60000,
+});
  return new Promise((resolve, reject) => {
   mongoConn.once("open", () => {
    console.log(MONGO_DB_NAME + " connected successfully");
