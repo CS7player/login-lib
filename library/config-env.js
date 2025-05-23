@@ -2,6 +2,7 @@ require("dotenv").config();
 
 //port_number
 global.PORT = process.env.PORT || 3000;
+global.IS_ALLOW_ORIGN = process.env.IS_ALLOW_ORIGN || 0;
 global.ALLOW_ORIGNS = (process.env.ALLOW_ORIGNS || '').split(',').filter(Boolean);
 global.JWT_SECRET_KEY = process.env.JWT_SECRET_KEY || "jwt";
 
